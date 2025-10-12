@@ -39,28 +39,317 @@ const beansData = [
   }
 ];
 
+// Styles
+const styles = {
+  header: {
+    backgroundColor: '#92400e',
+    color: 'white',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+  },
+  headerContainer: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 1rem',
+  },
+  headerFlex: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: '1rem 0',
+  },
+  logo: {
+    fontSize: '1.875rem',
+    fontWeight: 'bold',
+    background: 'none',
+    border: 'none',
+    color: 'white',
+    cursor: 'pointer',
+    transition: 'color 0.2s',
+  },
+  nav: {
+    display: 'flex',
+    gap: '1.5rem',
+    listStyle: 'none',
+  },
+  navButton: {
+    padding: '0.5rem 1rem',
+    borderRadius: '0.375rem',
+    border: 'none',
+    cursor: 'pointer',
+    fontSize: '1rem',
+    transition: 'background-color 0.2s',
+    color: 'white',
+  },
+  navButtonActive: {
+    backgroundColor: '#d97706',
+    fontWeight: '600',
+  },
+  navButtonInactive: {
+    backgroundColor: 'transparent',
+  },
+  footer: {
+    backgroundColor: '#1f2937',
+    color: 'white',
+    marginTop: 'auto',
+  },
+  footerContainer: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '1.5rem 1rem',
+    textAlign: 'center',
+  },
+  footerLink: {
+    color: '#fbbf24',
+    textDecoration: 'none',
+  },
+  container: {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '3rem 1rem',
+  },
+  homeHero: {
+    minHeight: '100vh',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+  },
+  overlay: {
+    position: 'absolute',
+    inset: 0,
+    backgroundColor: 'rgba(0,0,0,0.4)',
+  },
+  heroContent: {
+    position: 'relative',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '3rem 1rem',
+  },
+  heroTitle: {
+    fontSize: '3.75rem',
+    fontWeight: 'bold',
+    color: 'white',
+    marginBottom: '1rem',
+    textAlign: 'center',
+    textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+  },
+  heroSubtitle: {
+    fontSize: '1.875rem',
+    color: 'white',
+    marginBottom: '2rem',
+    textAlign: 'center',
+    textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+  },
+  heroImage: {
+    width: '100%',
+    maxWidth: '64rem',
+    margin: '0 auto 3rem',
+    borderRadius: '0.5rem',
+    boxShadow: '0 20px 25px -5px rgba(0,0,0,0.3)',
+  },
+  ctaButton: {
+    display: 'inline-block',
+    backgroundColor: '#d97706',
+    color: 'white',
+    padding: '1rem 2rem',
+    borderRadius: '0.5rem',
+    fontSize: '1.25rem',
+    fontWeight: '600',
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    transition: 'background-color 0.2s',
+  },
+  aboutContainer: {
+    maxWidth: '48rem',
+    margin: '0 auto',
+    backgroundColor: 'white',
+    borderRadius: '0.5rem',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    padding: '2rem',
+  },
+  aboutTitle: {
+    fontSize: '2.25rem',
+    fontWeight: 'bold',
+    color: '#92400e',
+    marginBottom: '1.5rem',
+  },
+  aboutText: {
+    color: '#374151',
+    marginBottom: '1rem',
+    lineHeight: '1.75',
+  },
+  beanGrid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '1.5rem',
+    marginBottom: '3rem',
+  },
+  beanCard: {
+    backgroundColor: 'white',
+    borderRadius: '0.5rem',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    overflow: 'hidden',
+    transition: 'transform 0.2s',
+  },
+  beanImage: {
+    width: '100%',
+    height: '12rem',
+    objectFit: 'cover',
+  },
+  beanCardContent: {
+    padding: '1.5rem',
+  },
+  beanName: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    color: '#92400e',
+    marginBottom: '0.5rem',
+  },
+  beanDescription: {
+    color: '#6b7280',
+    marginBottom: '1rem',
+  },
+  beanPrice: {
+    fontSize: '1.25rem',
+    fontWeight: '600',
+    color: '#1f2937',
+    marginBottom: '1rem',
+  },
+  inputGroup: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+  },
+  input: {
+    flex: 1,
+    padding: '0.5rem 0.75rem',
+    border: '1px solid #d1d5db',
+    borderRadius: '0.375rem',
+    fontSize: '1rem',
+  },
+  addButton: {
+    backgroundColor: '#d97706',
+    color: 'white',
+    padding: '0.5rem 1.5rem',
+    borderRadius: '0.375rem',
+    border: 'none',
+    cursor: 'pointer',
+    fontWeight: '600',
+    transition: 'background-color 0.2s',
+  },
+  cartContainer: {
+    maxWidth: '48rem',
+    margin: '0 auto',
+  },
+  cartBox: {
+    backgroundColor: 'white',
+    borderRadius: '0.5rem',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    padding: '1.5rem',
+  },
+  cartEmpty: {
+    backgroundColor: '#f3f4f6',
+    borderRadius: '0.5rem',
+    padding: '1.5rem',
+    textAlign: 'center',
+    color: '#6b7280',
+    fontSize: '1.125rem',
+  },
+  cartTitle: {
+    fontSize: '1.875rem',
+    fontWeight: 'bold',
+    color: '#92400e',
+    marginBottom: '1.5rem',
+  },
+  cartItem: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    borderBottom: '1px solid #e5e7eb',
+    paddingBottom: '1rem',
+    marginBottom: '1rem',
+  },
+  cartItemDetails: {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem',
+  },
+  removeButton: {
+    color: '#dc2626',
+    fontWeight: '600',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+  },
+  cartTotal: {
+    borderTop: '1px solid #e5e7eb',
+    paddingTop: '1rem',
+    marginBottom: '1.5rem',
+    display: 'flex',
+    justifyContent: 'space-between',
+    fontSize: '1.25rem',
+    fontWeight: 'bold',
+  },
+  submitButton: {
+    width: '100%',
+    backgroundColor: '#16a34a',
+    color: 'white',
+    padding: '0.75rem',
+    borderRadius: '0.5rem',
+    fontSize: '1.25rem',
+    fontWeight: '600',
+    border: 'none',
+    cursor: 'pointer',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    transition: 'background-color 0.2s',
+  },
+  thankYouBox: {
+    maxWidth: '32rem',
+    margin: '0 auto',
+    backgroundColor: '#dcfce7',
+    border: '2px solid #16a34a',
+    borderRadius: '0.5rem',
+    padding: '3rem',
+    textAlign: 'center',
+  },
+  thankYouTitle: {
+    fontSize: '2.25rem',
+    fontWeight: 'bold',
+    color: '#166534',
+    marginBottom: '1rem',
+  },
+};
+
 // Header Component
 const Header = ({ currentPage, setCurrentPage }) => {
   return (
-    <header className="bg-amber-800 text-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
+    <header style={styles.header}>
+      <div style={styles.headerContainer}>
+        <div style={styles.headerFlex}>
           <button 
             onClick={() => setCurrentPage('home')} 
-            className="text-3xl font-bold hover:text-amber-200 transition"
+            style={styles.logo}
+            onMouseOver={(e) => e.target.style.color = '#fbbf24'}
+            onMouseOut={(e) => e.target.style.color = 'white'}
           >
             Jett's Beans
           </button>
           <nav>
-            <ul className="flex space-x-6">
+            <ul style={styles.nav}>
               <li>
                 <button 
                   onClick={() => setCurrentPage('home')}
-                  className={`px-4 py-2 rounded transition ${
-                    currentPage === 'home' 
-                      ? 'bg-amber-600 font-semibold' 
-                      : 'hover:bg-amber-700'
-                  }`}
+                  style={{
+                    ...styles.navButton,
+                    ...(currentPage === 'home' ? styles.navButtonActive : styles.navButtonInactive)
+                  }}
+                  onMouseOver={(e) => {
+                    if (currentPage !== 'home') e.target.style.backgroundColor = '#78350f';
+                  }}
+                  onMouseOut={(e) => {
+                    if (currentPage !== 'home') e.target.style.backgroundColor = 'transparent';
+                  }}
                 >
                   Home
                 </button>
@@ -68,11 +357,16 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => setCurrentPage('about')}
-                  className={`px-4 py-2 rounded transition ${
-                    currentPage === 'about' 
-                      ? 'bg-amber-600 font-semibold' 
-                      : 'hover:bg-amber-700'
-                  }`}
+                  style={{
+                    ...styles.navButton,
+                    ...(currentPage === 'about' ? styles.navButtonActive : styles.navButtonInactive)
+                  }}
+                  onMouseOver={(e) => {
+                    if (currentPage !== 'about') e.target.style.backgroundColor = '#78350f';
+                  }}
+                  onMouseOut={(e) => {
+                    if (currentPage !== 'about') e.target.style.backgroundColor = 'transparent';
+                  }}
                 >
                   About
                 </button>
@@ -80,11 +374,16 @@ const Header = ({ currentPage, setCurrentPage }) => {
               <li>
                 <button 
                   onClick={() => setCurrentPage('order')}
-                  className={`px-4 py-2 rounded transition ${
-                    currentPage === 'order' 
-                      ? 'bg-amber-600 font-semibold' 
-                      : 'hover:bg-amber-700'
-                  }`}
+                  style={{
+                    ...styles.navButton,
+                    ...(currentPage === 'order' ? styles.navButtonActive : styles.navButtonInactive)
+                  }}
+                  onMouseOver={(e) => {
+                    if (currentPage !== 'order') e.target.style.backgroundColor = '#78350f';
+                  }}
+                  onMouseOut={(e) => {
+                    if (currentPage !== 'order') e.target.style.backgroundColor = 'transparent';
+                  }}
                 >
                   Order
                 </button>
@@ -100,14 +399,12 @@ const Header = ({ currentPage, setCurrentPage }) => {
 // Footer Component
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white mt-auto">
-      <div className="container mx-auto px-4 py-6">
-        <div className="text-center">
-          <p className="mb-2">© 2025 Jett's Beans. All rights reserved.</p>
-          <p className="text-gray-400">
-            Contact us: <a href="mailto:jettsbeans@example.com" className="text-amber-400 hover:text-amber-300">jettsbeans@example.com</a>
-          </p>
-        </div>
+    <footer style={styles.footer}>
+      <div style={styles.footerContainer}>
+        <p style={{ marginBottom: '0.5rem' }}>© 2025 Jett's Beans. All rights reserved.</p>
+        <p style={{ color: '#9ca3af' }}>
+          Contact us: <a href="mailto:jettsbeans@example.com" style={styles.footerLink}>jettsbeans@example.com</a>
+        </p>
       </div>
     </footer>
   );
@@ -117,31 +414,33 @@ const Footer = () => {
 const HomePage = ({ setCurrentPage }) => {
   return (
     <div 
-      className="min-h-screen bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('/jettChef.jpeg')" }}
+      style={{
+        ...styles.homeHero,
+        backgroundImage: "url('/jettChef.jpeg')"
+      }}
     >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div style={styles.overlay}></div>
       
-      {/* Content */}
-      <div className="relative container mx-auto px-4 py-12">
-        <div className="text-center mb-8">
-          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">Welcome to Jett's Beans!</h1>
-          <p className="text-3xl text-white mb-8 drop-shadow-lg">Order your favorite beans from Jett's Beans!</p>
+      <div style={styles.heroContent}>
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h1 style={styles.heroTitle}>Welcome to Jett's Beans!</h1>
+          <p style={styles.heroSubtitle}>Order your favorite beans from Jett's Beans!</p>
         </div>
         
-        <div className="max-w-4xl mx-auto mb-12">
+        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <img 
             src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=1200&h=600&fit=crop" 
             alt="Assorted Beans" 
-            className="w-full rounded-lg shadow-2xl"
+            style={styles.heroImage}
           />
         </div>
 
-        <div className="text-center">
+        <div style={{ textAlign: 'center' }}>
           <button 
             onClick={() => setCurrentPage('order')}
-            className="inline-block bg-amber-600 text-white px-8 py-4 rounded-lg text-xl font-semibold hover:bg-amber-700 transition shadow-lg"
+            style={styles.ctaButton}
+            onMouseOver={(e) => e.target.style.backgroundColor = '#b45309'}
+            onMouseOut={(e) => e.target.style.backgroundColor = '#d97706'}
           >
             Start Your Order
           </button>
@@ -154,31 +453,31 @@ const HomePage = ({ setCurrentPage }) => {
 // About Page Component
 const AboutPage = () => {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
-        <h1 className="text-4xl font-bold text-amber-800 mb-6">About Jett's Beans</h1>
+    <div style={styles.container}>
+      <div style={styles.aboutContainer}>
+        <h1 style={styles.aboutTitle}>About Jett's Beans</h1>
         
-        <div className="prose prose-lg">
-          <p className="text-gray-700 mb-4">
+        <div>
+          <p style={styles.aboutText}>
             Founded in 2020, Jett's Beans started as a dream to bring the finest quality beans 
             to homes across the country. Our founder, Jett Rodriguez, grew up helping his grandmother 
             prepare traditional bean dishes, sparking a lifelong passion for these nutritious legumes.
           </p>
           
-          <p className="text-gray-700 mb-4">
+          <p style={styles.aboutText}>
             What sets Jett's Beans apart is our commitment to quality and sustainability. We source 
             our beans from small family farms that practice ethical and environmentally-friendly 
             farming methods. Each can is carefully inspected and packed to ensure you receive 
             only the best.
           </p>
           
-          <p className="text-gray-700 mb-4">
+          <p style={styles.aboutText}>
             From classic Black and Pinto beans to our exotic Roo Beans and the crowd-favorite 
             JETT'S SPECIAL COMBO, we offer something for every palate. Whether you're making 
             a traditional family recipe or experimenting with new flavors, Jett's Beans has you covered.
           </p>
           
-          <p className="text-gray-700 font-semibold">
+          <p style={{ ...styles.aboutText, fontWeight: '600' }}>
             Thank you for choosing Jett's Beans. We're honored to be part of your kitchen!
           </p>
         </div>
@@ -204,31 +503,39 @@ const BeanCard = ({ bean, onAddToCart }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105">
+    <div 
+      style={styles.beanCard}
+      onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+      onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+    >
       <img 
         src={bean.image} 
         alt={bean.name} 
-        className="w-full h-48 object-cover"
+        style={styles.beanImage}
       />
-      <div className="p-6">
-        <h3 className="text-2xl font-bold text-amber-800 mb-2">{bean.name}</h3>
-        <p className="text-gray-600 mb-4">{bean.description}</p>
-        <p className="text-xl font-semibold text-gray-800 mb-4">${bean.price.toFixed(2)}</p>
+      <div style={styles.beanCardContent}>
+        <h3 style={styles.beanName}>{bean.name}</h3>
+        <p style={styles.beanDescription}>{bean.description}</p>
+        <p style={styles.beanPrice}>${bean.price.toFixed(2)}</p>
         
-        <div className="flex items-center space-x-4">
-          <div className="flex-1">
-            <label className="block text-sm font-medium text-gray-700 mb-1">Quantity</label>
+        <div style={styles.inputGroup}>
+          <div style={{ flex: 1 }}>
+            <label style={{ display: 'block', fontSize: '0.875rem', fontWeight: '500', color: '#374151', marginBottom: '0.25rem' }}>
+              Quantity
+            </label>
             <input 
               type="number" 
               min="0" 
               value={quantity}
               onChange={handleQuantityChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-amber-500"
+              style={styles.input}
             />
           </div>
           <button 
             onClick={handleAddToCart}
-            className="bg-amber-600 text-white px-6 py-2 rounded-md hover:bg-amber-700 transition font-semibold mt-6"
+            style={{ ...styles.addButton, marginTop: '1.5rem' }}
+            onMouseOver={(e) => e.target.style.backgroundColor = '#b45309'}
+            onMouseOut={(e) => e.target.style.backgroundColor = '#d97706'}
           >
             Add to Cart
           </button>
@@ -244,38 +551,40 @@ const CartSummary = ({ cart, onUpdateQuantity, onRemove, onSubmitOrder }) => {
 
   if (cart.length === 0) {
     return (
-      <div className="bg-gray-100 rounded-lg p-6 text-center">
-        <p className="text-gray-600 text-lg">Your cart is empty</p>
+      <div style={styles.cartEmpty}>
+        <p>Your cart is empty</p>
       </div>
     );
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-3xl font-bold text-amber-800 mb-6">Your Cart</h2>
+    <div style={styles.cartBox}>
+      <h2 style={styles.cartTitle}>Your Cart</h2>
       
-      <div className="space-y-4 mb-6">
+      <div style={{ marginBottom: '1.5rem' }}>
         {cart.map((item) => (
-          <div key={item.bean.id} className="flex items-center justify-between border-b pb-4">
-            <div className="flex-1">
-              <h3 className="font-semibold text-lg">{item.bean.name}</h3>
-              <p className="text-gray-600">${item.bean.price.toFixed(2)} each</p>
+          <div key={item.bean.id} style={styles.cartItem}>
+            <div style={{ flex: 1 }}>
+              <h3 style={{ fontWeight: '600', fontSize: '1.125rem' }}>{item.bean.name}</h3>
+              <p style={{ color: '#6b7280' }}>${item.bean.price.toFixed(2)} each</p>
             </div>
             
-            <div className="flex items-center space-x-4">
+            <div style={styles.cartItemDetails}>
               <input 
                 type="number" 
                 min="0" 
                 value={item.quantity}
                 onChange={(e) => onUpdateQuantity(item.bean.id, Math.max(0, parseInt(e.target.value) || 0))}
-                className="w-20 px-2 py-1 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-amber-500"
+                style={{ ...styles.input, width: '80px' }}
               />
-              <span className="font-semibold w-20 text-right">
+              <span style={{ fontWeight: '600', width: '80px', textAlign: 'right' }}>
                 ${(item.bean.price * item.quantity).toFixed(2)}
               </span>
               <button 
                 onClick={() => onRemove(item.bean.id)}
-                className="text-red-600 hover:text-red-800 font-semibold"
+                style={styles.removeButton}
+                onMouseOver={(e) => e.target.style.color = '#b91c1c'}
+                onMouseOut={(e) => e.target.style.color = '#dc2626'}
               >
                 Remove
               </button>
@@ -284,16 +593,16 @@ const CartSummary = ({ cart, onUpdateQuantity, onRemove, onSubmitOrder }) => {
         ))}
       </div>
       
-      <div className="border-t pt-4 mb-6">
-        <div className="flex justify-between items-center text-xl font-bold">
-          <span>Total:</span>
-          <span className="text-amber-800">${total.toFixed(2)}</span>
-        </div>
+      <div style={styles.cartTotal}>
+        <span>Total:</span>
+        <span style={{ color: '#92400e' }}>${total.toFixed(2)}</span>
       </div>
       
       <button 
         onClick={onSubmitOrder}
-        className="w-full bg-green-600 text-white py-3 rounded-lg text-xl font-semibold hover:bg-green-700 transition shadow-lg"
+        style={styles.submitButton}
+        onMouseOver={(e) => e.target.style.backgroundColor = '#15803d'}
+        onMouseOut={(e) => e.target.style.backgroundColor = '#16a34a'}
       >
         Submit Order
       </button>
@@ -348,21 +657,27 @@ const OrderPage = () => {
 
   if (orderSubmitted) {
     return (
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-2xl mx-auto bg-green-100 border-2 border-green-500 rounded-lg p-12 text-center">
-          <h1 className="text-4xl font-bold text-green-800 mb-4">Thank You!</h1>
-          <p className="text-xl text-gray-700 mb-4">Your order has been successfully submitted.</p>
-          <p className="text-gray-600">We'll start preparing your delicious beans right away!</p>
+      <div style={styles.container}>
+        <div style={styles.thankYouBox}>
+          <h1 style={styles.thankYouTitle}>Thank You!</h1>
+          <p style={{ fontSize: '1.25rem', color: '#374151', marginBottom: '1rem' }}>
+            Your order has been successfully submitted.
+          </p>
+          <p style={{ color: '#6b7280' }}>
+            We'll start preparing your delicious beans right away!
+          </p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold text-amber-800 mb-8 text-center">Order Your Beans</h1>
+    <div style={styles.container}>
+      <h1 style={{ ...styles.cartTitle, textAlign: 'center', marginBottom: '2rem' }}>
+        Order Your Beans
+      </h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div style={styles.beanGrid}>
         {beansData.map(bean => (
           <BeanCard 
             key={bean.id} 
@@ -372,7 +687,7 @@ const OrderPage = () => {
         ))}
       </div>
       
-      <div className="max-w-3xl mx-auto">
+      <div style={styles.cartContainer}>
         <CartSummary 
           cart={cart}
           onUpdateQuantity={handleUpdateQuantity}
@@ -402,9 +717,9 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-amber-50">
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', backgroundColor: '#fef3c7' }}>
       <Header currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main className="flex-1">
+      <main style={{ flex: 1 }}>
         {renderPage()}
       </main>
       <Footer />
