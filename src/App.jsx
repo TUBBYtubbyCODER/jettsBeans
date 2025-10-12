@@ -177,15 +177,15 @@ const styles = {
   aboutOverlay: {
     position: 'absolute',
     inset: 0,
-    backgroundColor: 'rgba(255,255,255,0.8)',
+    backgroundColor: 'rgba(255, 255, 255, 0.)',
   },
   aboutContainer: {
     position: 'relative',
     maxWidth: '48rem',
     margin: '0 auto',
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
     borderRadius: '0.5rem',
-    boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 1)',
     padding: '2rem',
     zIndex: 1,
   },
