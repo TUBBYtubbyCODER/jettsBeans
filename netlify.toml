@@ -4,11 +4,11 @@
   functions = "netlify/functions"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "18"
 
 [functions]
   node_bundler = "esbuild"
-  
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
