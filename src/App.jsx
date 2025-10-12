@@ -165,7 +165,7 @@ const styles = {
   aboutBackground: {
     minHeight: '100vh',
     backgroundImage: "url('/images/jettCookingBeans.jpeg')",
-    backgroundSize: '75%',
+    backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
@@ -472,27 +472,33 @@ const AboutPage = () => {
         <h1 style={styles.aboutTitle}>About Jett's Beans</h1>
         
         <div>
+          
           <p style={styles.aboutText}>
             Founded in 2025, Jett's Beans started as a dream to bring the finest quality beans 
-            to homes across the country. Our founder, Jett Rodriguez, grew up helping his grandmother 
-            prepare traditional bean dishes, sparking a lifelong passion for these nutritious legumes.
+            to homes across the country. Our founder, Jettudiah, grew up eating many kinds of beans, 
+            sparking a lifelong passion for these nutritious legumes.
           </p>
           
           <p style={styles.aboutText}>
             What sets Jett's Beans apart is our commitment to quality and sustainability. We source 
             our beans from small family farms that practice ethical and environmentally-friendly 
             farming methods. Each can is carefully inspected and packed to ensure you receive 
-            only the best.
+            only the best from JETTUDIAH!
           </p>
           
           <p style={styles.aboutText}>
-            From classic Black and Pinto beans to our exotic Roo Beans and the crowd-favorite 
+            From classic Black and Pinto beans to our exotic ROOO Beans, and the crowd-favorite 
             JETT'S SPECIAL COMBO, we offer something for every palate. Whether you're making 
             a traditional family recipe or experimenting with new flavors, Jett's Beans has you covered.
           </p>
           
+          <p style={styles.aboutText}>
+            RIce & Legumes are the most commonly consumed food in the world. 
+            Do you know how many BEANS are eaten every day???
+          </p>
+
           <p style={{ ...styles.aboutText, fontWeight: '600' }}>
-            Thank you for choosing Jett's Beans. We're honored to be part of your kitchen!
+            Thank ROOOO for choosing Jett's Beans. We're honored to be part of your kitchen!
           </p>
         </div>
       </div>
