@@ -6,35 +6,35 @@ const beansData = [
     id: 1,
     name: 'Black Beans',
     description: 'Rich, hearty black beans perfect for any meal. Great for tacos, soups, and more!',
-    image: 'https://images.unsplash.com/photo-1589927986089-35812388d1f4?w=400&h=300&fit=crop',
+    image: '/images/black-beans.jpg',
     price: 3.99
   },
   {
     id: 2,
     name: 'Pinto Beans',
     description: 'Classic pinto beans with a creamy texture. A staple for traditional dishes.',
-    image: 'https://images.unsplash.com/photo-1612459387180-b9e98bfbd06b?w=400&h=300&fit=crop',
+    image: '/images/pinto-beans.jpg',
     price: 3.49
   },
   {
     id: 3,
     name: 'Navy Beans',
     description: 'Small, mild-flavored beans ideal for baked beans and casseroles.',
-    image: 'https://images.unsplash.com/photo-1556910110-2f5d6e3d8201?w=400&h=300&fit=crop',
+    image: '/images/navy-beans.jpg',
     price: 3.79
   },
   {
     id: 4,
     name: 'Roo Beans',
     description: 'Exotic and flavorful! Our signature Australian-inspired beans with a unique taste.',
-    image: 'https://images.unsplash.com/photo-1583999913260-c58c80e55f16?w=400&h=300&fit=crop',
+    image: '/images/roo-beans.jpg',
     price: 4.99
   },
   {
     id: 5,
     name: "JETT'S SPECIAL COMBO",
     description: 'The ultimate bean experience! A carefully curated mix of our finest beans.',
-    image: 'https://images.unsplash.com/photo-1595855759920-86582396756a?w=400&h=300&fit=crop',
+    image: '/images/special-combo.jpg',
     price: 6.99
   }
 ];
@@ -160,14 +160,36 @@ const styles = {
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
     transition: 'background-color 0.2s',
   },
+
+  // ABOUT PAGE BACKGROUND (uses image from public/images)
+  aboutBackground: {
+    minHeight: '100vh',
+    backgroundImage: "url('/images/jettCookingBeans.jpeg')",
+    backgroundSize: '75%',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    position: 'relative',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '3rem 1rem',
+  },
+  aboutOverlay: {
+    position: 'absolute',
+    inset: 0,
+    backgroundColor: 'rgba(255,255,255,0.8)',
+  },
   aboutContainer: {
+    position: 'relative',
     maxWidth: '48rem',
     margin: '0 auto',
     backgroundColor: 'white',
     borderRadius: '0.5rem',
     boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
     padding: '2rem',
+    zIndex: 1,
   },
+
   aboutTitle: {
     fontSize: '2.25rem',
     fontWeight: 'bold',
@@ -403,7 +425,7 @@ const Footer = () => {
       <div style={styles.footerContainer}>
         <p style={{ marginBottom: '0.5rem' }}>© 2025 Jett's Beans. All rights reserved.</p>
         <p style={{ color: '#9ca3af' }}>
-          Contact us: <a href="mailto:jettsbeans@example.com" style={styles.footerLink}>jettsbeans@example.com</a>
+          Contact us: <a href="mailto:jettsbeans@rooroorooyourboat.com" style={styles.footerLink}>jettsbeans@rooroorooyourboat.com</a>
         </p>
       </div>
     </footer>
@@ -416,7 +438,7 @@ const HomePage = ({ setCurrentPage }) => {
     <div 
       style={{
         ...styles.homeHero,
-        backgroundImage: "url('/jettChef.jpeg')"
+        backgroundImage: "url('/images/jettChef.jpeg')"
       }}
     >
       <div style={styles.overlay}></div>
@@ -425,14 +447,6 @@ const HomePage = ({ setCurrentPage }) => {
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <h1 style={styles.heroTitle}>Welcome to Jett's Beans!</h1>
           <p style={styles.heroSubtitle}>Order your favorite beans from Jett's Beans!</p>
-        </div>
-        
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <img 
-            src="https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=1200&h=600&fit=crop" 
-            alt="Assorted Beans" 
-            style={styles.heroImage}
-          />
         </div>
 
         <div style={{ textAlign: 'center' }}>
@@ -450,16 +464,16 @@ const HomePage = ({ setCurrentPage }) => {
   );
 };
 
-// About Page Component
 const AboutPage = () => {
   return (
-    <div style={styles.container}>
+    <div style={styles.aboutBackground}>
+      <div style={styles.aboutOverlay}></div>
       <div style={styles.aboutContainer}>
         <h1 style={styles.aboutTitle}>About Jett's Beans</h1>
         
         <div>
           <p style={styles.aboutText}>
-            Founded in 2020, Jett's Beans started as a dream to bring the finest quality beans 
+            Founded in 2025, Jett's Beans started as a dream to bring the finest quality beans 
             to homes across the country. Our founder, Jett Rodriguez, grew up helping his grandmother 
             prepare traditional bean dishes, sparking a lifelong passion for these nutritious legumes.
           </p>
