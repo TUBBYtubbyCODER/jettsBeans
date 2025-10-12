@@ -6,14 +6,14 @@ const beansData = [
     id: 1,
     name: 'Black Beans',
     description: 'Rich, hearty black beans perfect for any meal. Great for tacos, soups, and more!',
-    image: '/images/IMG_5679.jpeg',
+    image: '/images/IMG_5678.jpeg',
     price: 3.99
   },
   {
     id: 2,
     name: 'Pinto Beans',
     description: 'Classic pinto beans with a creamy texture. A staple for traditional dishes.',
-    image: '/images/IMG_5680.jpeg',
+    image: '/images/IMG_5679.jpeg',
     price: 3.49
   },
   {
